@@ -34,7 +34,8 @@ std::vector<std::string> split(const std::string &s, char delim) {
 	return elems;
 }
 
-// Split functions courtesy of Evan Teran and StackOverflow community (http://stackoverflow.com/questions/236129/splitting-a-string-in-c)
+// Split functions courtesy of Evan Teran and StackOverflow community 
+// (http://stackoverflow.com/questions/236129/splitting-a-string-in-c)
 
 
 
@@ -273,8 +274,10 @@ public:
 	}
 
 
-	//PM@TODO To support several strings formats we should do something like parameters.toStr<JSON>() or parameters.toStr<SimpleFormat>()
+	// PM@TODO To support several strings formats we should do something like 
+        // parameters.toStr<JSON>() or parameters.toStr<SimpleFormat>()
 	// where the template type implements IStringFormat interface.
+
 	template<class FormatClass>
 	std::string toStr(FormatClass format = FormatClass())
 	{
