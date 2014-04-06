@@ -9,10 +9,12 @@
 #include <sstream>
 #include <type_traits>
 #include <future>
+#include <list>
 
 #ifndef WIN32
 	#include <assert.h>
 	#define _ASSERTE(x) assert(x)
+        #define _ASSERT(x) assert(x)
 #endif
 //MACROS
 
