@@ -18,7 +18,7 @@ private:
 	void foo2(parameters params) { cout << "Executing foo2: " << params.at<int>(0) << endl; }
 };
 
-void foo3()
+void foo3(parameters params)
 {
 	cout << "Executing foo3" << endl;
 }
@@ -37,16 +37,13 @@ int main()
 	A a;
 
 	//Register the event for the simple function
-	register_event("foo_event3", foo3);
-	register_event("foo_event4", foo4);
+	register_event("foo_event3", function_to_event(foo3));
+	register_event("foo_event4", function_to_event(foo4));
 
 	trigger_event("foo_event");
 	trigger_event<int>("foo_event2", 5);
 	trigger_event("foo_event3");
 	trigger_event<int>("foo_event4", 5);
-
-
-	cin.get();
 
 	return 0; 
 }
